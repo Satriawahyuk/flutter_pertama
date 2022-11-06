@@ -1,12 +1,12 @@
 //oop
 //class
 class Kendaraan {
-  String? merk;
+  String? brand;
   String? nama;
   int? harga;
 
   //construktor
-  Kendaraan(this.merk, this.nama, this.harga);
+  Kendaraan({this.brand, this.nama, this.harga});
 
   //method
   maju(int kecepatan) {
@@ -19,14 +19,14 @@ class Sedan extends Kendaraan {
   int? jumlahPintu;
   int? kecepatanMaksimal;
 
-  Sedan({String? merk, this.jumlahPintu, this.kecepatanMaksimal})
-      : super(merk = merk);
+  Sedan({String? brand, this.jumlahPintu, this.kecepatanMaksimal})
+      : super(brand: brand);
 }
 
 void main() {
   //tipe data dan variabel
   //var
-  print('VARIAN');
+  print('VARIABEL');
   var mahasiswa = "Satria Wahyu Kurniawan";
   var umur = "20";
 
@@ -187,29 +187,29 @@ void main() {
   } while (no3 <= no4);
 
   //Instansiasi
-  var k1 = Kendaraan(merk: 'Honda', nama: 'Civic', harga: 500);
+  var k1 = Kendaraan(brand: 'Honda', nama: 'Civic', harga: 500);
   var kecepatan = k1.maju(70);
 
-  k1.merk = 'Honda';
+  k1.brand = 'Honda';
   print(kecepatan);
   print(k1.maju(70));
-  print(k1.merk);
+  print(k1.brand);
   print(k1.nama);
   print(k1.harga);
 
-  var k2 = Kendaraan(merk: 'Mitsubishi', nama: 'ColtDiesel', harga: 700);
+  var k2 = Kendaraan(brand: 'Mitsubishi', nama: 'ColtDiesel', harga: 700);
   var kecepatan2 = k2.maju(40);
   print(kecepatan2);
   print(k2.maju(40));
-  print(k2.merk);
+  print(k2.brand);
   print(k2.nama);
   print(k2.harga);
 
-  var sedan1 = Sedan(jumlahPintu: 4, kecepatanMaksimal: 140, merk: 'Honda');
+  var sedan1 = Sedan(jumlahPintu: 4, kecepatanMaksimal: 140, brand: 'Honda');
   print('---------');
   print(sedan1.jumlahPintu);
   print(sedan1.kecepatanMaksimal);
-  print(sedan1.merk);
+  print(sedan1.brand);
 }
 
 //function
